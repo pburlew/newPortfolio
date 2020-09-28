@@ -207,7 +207,7 @@ nav { display: none; }
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
-        
+
     }
 
     /* this style feature says to only add a left margin if there is another obj to the right. the leftmost obj does not get a left margin. */
@@ -216,5 +216,17 @@ nav { display: none; }
     }
 }
 
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px){
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+    }
+}
 
 
