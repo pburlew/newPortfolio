@@ -142,5 +142,44 @@ nav { display: none; }
     }
 }
 
+/* my services section */
+/* put a background color just in case the img doesnt load */
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(./img/services-bg.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after{
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.5;
+}
+
+@media (min-width: 800px){
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* this style feature says to only add a left margin if there is another obj to the right. the leftmost obj does not get a left margin. */
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
 
 
